@@ -5,6 +5,13 @@
 <link rel="stylesheet" href="myclock.css">
 </head>
 <body onload="initClock()">
-<script type="text/javascript" src="myclock.js"></script> 
+<script type="text/javascript" src="myclock.js"></script>
+  <!-- This will be replaced with a dynamic seed at refresh -->
+  <p id="utc-time">
+    <script>
+      // Seed with system UTC time at page load
+      document.write(new Date().toISOString());
+    </script>
+  </p>  
 </body>
 </html>
