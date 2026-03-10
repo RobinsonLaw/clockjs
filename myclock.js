@@ -1,5 +1,22 @@
 var months = ["January", "February", "March", "April", "May", "June", "July", "Augest", "September", "October", "November", "December"];
 var week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+// Inject the datetime block into the page
+document.body.insertAdjacentHTML("beforeend", `
+  <div class="datetime">
+    <div class="date">
+      <span id="dayname">Day</span>,
+      <span id="month">Month</span>
+      <span id="daynum">00</span>,
+      <span id="year">Year</span>
+    </div>
+    <div class="time">
+      <span id="hour">00</span>:
+      <span id="minutes">00</span>:
+      <span id="seconds">00</span>
+      <span id="period">AM</span>
+    </div>
+  </div>
+`);
 function updateClock(rtc){ 
   var dname = rtc.getDay(),mo = rtc.getMonth(),dnum = rtc.getDate(),
   yr = rtc.getFullYear(),hou = rtc.getHours(), min = rtc.getMinutes(), sec = rtc.getSeconds(), pe = "AM";
