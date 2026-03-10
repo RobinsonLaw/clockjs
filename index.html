@@ -7,11 +7,11 @@
 <body onload="initClock()">
 <script type="text/javascript" src="myclock.js"></script>
   <!-- This will be replaced with a dynamic seed at refresh -->
-  <p id="utc-time">
+  <p id="utc-time"></p>
     <script>
       // Seed with system UTC time at page load
-      document.write(new Date().toISOString());
+       document.getElementById("utc-time").textContent = new Date().toISOString();
     </script>
-  </p>  
+    
 </body>
 </html>
